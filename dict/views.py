@@ -1,7 +1,8 @@
 from django.shortcuts import render
 import openai
+import os
 
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 # Create your views here.
 from .forms import DictForm
 
